@@ -8,30 +8,16 @@ namespace Tyuiu.KhafizovTV.Sprint4.Task3.V2.Lib
         {
             int colums = array.GetUpperBound(1) + 1;
             
-            int sumEven = 0;
-            int maxOdd = int.MinValue;
-            
-            for (int j = 0; j < colums; j++)
+            int max = array[0, 0];
+            for (int j = 1; j < colums; j++)
             {
-                if (array[0, j] % 2 == 0)
+                if (array[0, j] > max)
                 {
-                    sumEven += array[0, j];
-                }
-                else
-                {
-                    if (array[0, j] > maxOdd)
-                    {
-                        maxOdd = array[0, j];
-                    }
+                    max = array[0, j];
                 }
             }
             
-            if (maxOdd == int.MinValue)
-            {
-                return sumEven;
-            }
-            
-            return sumEven + maxOdd;
+            return max;
         }
     }
 }

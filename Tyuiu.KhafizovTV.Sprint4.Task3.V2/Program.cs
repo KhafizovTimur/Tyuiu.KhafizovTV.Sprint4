@@ -46,7 +46,7 @@ namespace Tyuiu.KhafizovTV.Sprint4.Task3.V2
 
             int res = ds.Calculate(array);
 
-            Console.WriteLine("Сумма чётных элементов + максимум нечётных = " + res);
+            Console.WriteLine("Максимальный элемент в первой строке = " + res);
             Console.ReadKey();
         }
     }
